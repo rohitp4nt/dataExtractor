@@ -75,4 +75,4 @@ win32-setctime==1.1.0
 uvicorn==0.21.1
 fastapi==0.110.1
 python-dotenv==1.0.1
-python-multipart
+python-multipart==0.0.6
