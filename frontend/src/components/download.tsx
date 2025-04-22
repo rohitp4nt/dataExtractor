@@ -11,7 +11,7 @@ const CsvDownloadCard = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/download-csv/");
+      const response = await fetch("https://dataextractor-h9sl.onrender.com/download-csv/");
 
       if (!response.ok) {
         throw new Error("Failed to download CSV");

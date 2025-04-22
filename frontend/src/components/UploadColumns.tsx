@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Plus, X, Save, AlertCircle, CheckCircle } from "lucide-react";
 
@@ -46,7 +46,7 @@ const UploadColumns = () => {
     setIsLoading(true);
     
     try {
-      const response = await axios.post("http://localhost:8000/upload-columns", {
+      const response = await axios.post("https://dataextractor-h9sl.onrender.com/upload-columns", {
         columns: filteredColumns,
       });
       showNotification("success", response.data.message || "Columns submitted successfully");
