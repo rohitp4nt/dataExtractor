@@ -9,7 +9,10 @@ app = FastAPI()
 # Add CORSMiddleware to allow cross-origin requests from your frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Frontend URL (React app)
+    allow_origins= [
+    "http://localhost:5173",  # Local dev frontend
+    "https://data-extractor-956v.vercel.app",  # Deployed frontend on Vercel
+],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all headers
