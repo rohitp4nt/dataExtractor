@@ -54,7 +54,7 @@ async def upload_pdfs(files: List[UploadFile] = File(...)):
             end_index = content.index(end_tag) + len(end_tag)
             # Remove the block with columns from the trainingdata.txt
             content = content[:start_index] + content[end_index:]
-
+            
             # Write the updated content back to the file
             with open(TRAINING_DATA_FILE, "w", encoding="utf-8") as f:
                 f.write(content)
