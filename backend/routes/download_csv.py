@@ -11,7 +11,6 @@ CSV_PATH = "outputs/main.csv"  # Adjust to your file location
 def clear_csv_file():
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        # Optionally write headers here if needed
         pass
 
 @router.get("/download-csv/")
